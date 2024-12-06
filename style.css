@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+.hero-heading {
+    background: linear-gradient(90deg, #553DFF 0%, #37C4F1 23.9%, #82F0B8 47.54%, #6BB3FF 69.67%, #F169F4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.try-text {
+    background: linear-gradient(90deg, #E59CFF 0.01%, #BA9CFF 50.01%, #9CB2FF 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.try-text-border {
+    border: .5px solid #4299e1;
+}
+
+.companies-images::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10%;
+    height: 100%;
+    background-color: black;
+    filter: blur(20px);
+    opacity: .7;
+}
+
+.companies-images::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10%;
+    height: 100%;
+    background-color: black;
+    filter: blur(20px);
+    opacity: .7;
+}
+
+.ugc-heading {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.ugc-btn {
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.ugc-box {
+    background: linear-gradient(90deg, #553DFF 0%, #37C4F1 23.9%, #82F0B8 47.54%, #6BB3FF 69.67%, #F169F4 100%);
+    padding: 1px;
+}
+
+.influencers-marque-box::-webkit-scrollbar {
+    display: none;
+}
+
+@media (min-width : 1024px) {
+    .influencers-marque-box {
+        animation: move 20s linear infinite;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    @keyframes move {
+        from {
+            transform: translateX(0%);
+        }
+
+        to {
+            transform: translateX(-10%);
+        }
+    }
+}
+
+
+.reviews-containar::-webkit-scrollbar {
+    display: none;
+}
+
+.reviews-line{
+    animation: reviews 50s linear infinite;
+}
+.reviews-line2{
+    animation: reviews 50s linear infinite;
+    animation-direction: reverse;
+}
+.reviews-line:hover, .reviews-line2:hover {
+    animation-play-state: paused;
+}
+@keyframes reviews {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100% - 24px));
+    }
+}
+.scaling-container{
+    background: linear-gradient(to right, #0b0b16, #4c1db5, #7d2ae8);
+}
+.scaling-container button{
+    background: hsl(245, 88%, 60%)
+}
+.iconn:hover{
+    animation: jumps 1.5s linear;
+}
+@keyframes jumps {
+    0%{
+        transform: translateY(0);
+    }
+
+    33%{
+        transform: translateY(-15px);
+    }
+
+    50%{
+        transform: translateY(-2px);
+    }
+    75%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+
+}
